@@ -12,31 +12,14 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://bacreative.media">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style"
-        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap">
-    <link rel="stylesheet"
+    <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
-        media="print" onload="this.media='all'">
-    <noscript>
-        <link rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap">
-    </noscript>
+        rel="stylesheet">
+
+    <link rel="preload" as="image" href="bursel.jpg">
 
 
-
-    <!-- Google Analytics 4 (lädt erst nach Cookie-Zustimmung) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTJ85H0HWR"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('consent', 'default', {
-            analytics_storage: 'denied'
-        });
-        gtag('js', new Date());
-        gtag('config', 'G-MTJ85H0HWR');
-    </script>
 
 
     <style>
@@ -1797,7 +1780,8 @@
                     <div class="team-img-wrap">
                         <picture>
                             <source media="(max-width: 768px)" srcset="bursel_mobile.jpg">
-                            <img src="bursel.jpg" alt="Burak & Selin Altas – BA Creative" class="team-img">
+                            <img src="bursel.jpg" alt="Burak & Selin Altas – BA Creative" class="team-img" width="600"
+                                height="820" loading="lazy" decoding="async">
                         </picture>
                         <div class="team-img-label">Das Team hinter BA Creative</div>
                     </div>
@@ -2105,6 +2089,15 @@
                 gtag('consent', 'update', { analytics_storage: 'granted' });
             }
         }
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTJ85H0HWR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', { analytics_storage: 'denied' });
+        gtag('js', new Date());
+        gtag('config', 'G-MTJ85H0HWR');
     </script>
 
 </body>
