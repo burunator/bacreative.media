@@ -11,6 +11,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
         rel="stylesheet">
+
+
+
+    <!-- Google Analytics 4 (lädt erst nach Cookie-Zustimmung) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MTJ85H0HWR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('consent', 'default', {
+            analytics_storage: 'denied'
+        });
+        gtag('js', new Date());
+        gtag('config', 'G-MTJ85H0HWR');
+    </script>
+
+
     <style>
         *,
         *::before,
@@ -57,6 +73,100 @@
         img {
             display: block;
             max-width: 100%
+        }
+
+
+        /* COOKIE BANNER */
+        #cookie-banner {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 999;
+            width: calc(100% - 4rem);
+            max-width: 680px;
+            background: var(--s2);
+            border: 1px solid var(--bd2);
+            border-radius: var(--r);
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+        }
+
+        #cookie-banner p {
+            font-size: .84rem;
+            color: var(--t1);
+            line-height: 1.65;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        #cookie-banner a {
+            color: var(--ac);
+            text-decoration: underline;
+        }
+
+        #cookie-banner a:hover {
+            text-decoration: none
+        }
+
+        .cookie-btns {
+            display: flex;
+            gap: .6rem;
+            flex-shrink: 0;
+        }
+
+        .cookie-accept {
+            background: var(--ac);
+            color: #08080a;
+            border: none;
+            border-radius: 6px;
+            padding: .5rem 1.15rem;
+            font-family: 'Syne', sans-serif;
+            font-size: .82rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background .2s;
+            white-space: nowrap;
+        }
+
+        .cookie-accept:hover {
+            background: var(--ac2)
+        }
+
+        .cookie-decline {
+            background: transparent;
+            color: var(--t2);
+            border: 1px solid var(--bd2);
+            border-radius: 6px;
+            padding: .5rem 1.15rem;
+            font-size: .82rem;
+            cursor: pointer;
+            transition: all .2s;
+            white-space: nowrap;
+        }
+
+        .cookie-decline:hover {
+            color: var(--t1);
+            border-color: var(--t2)
+        }
+
+        #cookie-banner.hidden {
+            display: none
+        }
+
+        @media(max-width:500px) {
+            #cookie-banner {
+                bottom: 1rem;
+                left: 1rem;
+                right: 1rem;
+                width: auto;
+                transform: none
+            }
         }
 
         /* NAV */
@@ -1349,6 +1459,19 @@
 
 <body>
 
+
+    <div id="cookie-banner">
+        <p>
+            Wir verwenden Google Analytics um zu verstehen wie Besucher unsere Website nutzen.
+            Die Daten werden anonym erhoben. Weitere Infos in unserer
+            <a href="datenschutz.html">Datenschutzerklärung</a>.
+        </p>
+        <div class="cookie-btns">
+            <button class="cookie-decline" onclick="cookieDecline()">Ablehnen</button>
+            <button class="cookie-accept" onclick="cookieAccept()">Akzeptieren</button>
+        </div>
+    </div>
+
     <!-- NAV -->
     <nav>
         <a href="#" class="logo">BA<b>.</b>Creative</a>
@@ -1674,7 +1797,7 @@
                         <p class="tmr-text">Seit 2019 im Affiliate Marketing und E-Commerce aktiv — mit Google Ads,
                             Microsoft Ads und Native Ads. Ausgezeichnet als <strong>Clickbank Platinum Affiliate
                                 (2022–2025)</strong> sowie mit dem <strong>MaxWeb Gold Award</strong> in jedem Jahr von
-                            2022 bis 2026. Über 10 Mio. € Umsatz generiert, davon über 2 Mio. € Ad Spend alleine
+                            2022 bis 2026. Über 10 Mio. € Umsatz generiert, davon über 8 Mio. € Ad Spend alleine
                             betrieben.</p>
                         <div class="tmr-awards">
                             <div class="award-badge">🏆 Clickbank Platinum 2022–2025</div>
@@ -1903,8 +2026,8 @@
     <footer>
         <a href="#" class="f-logo">BA<b>.</b>Creative</a>
         <div class="f-links">
-            <a href="#">Impressum</a>
-            <a href="#">Datenschutz</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
             <a href="#kontakt">Kontakt</a>
         </div>
         <p>© 2026 BA Creative · Burak Altas</p>
@@ -1945,6 +2068,24 @@
                 alert('Es gab einen Fehler. Bitte schreiben Sie uns direkt an mail@ba-creative.me');
             }
         });
+
+        // Cookie Consent + GA4
+        function cookieAccept() {
+            localStorage.setItem('cookie-consent', 'accepted');
+            document.getElementById('cookie-banner').classList.add('hidden');
+            gtag('consent', 'update', { analytics_storage: 'granted' });
+        }
+        function cookieDecline() {
+            localStorage.setItem('cookie-consent', 'declined');
+            document.getElementById('cookie-banner').classList.add('hidden');
+        }
+        const consent = localStorage.getItem('cookie-consent');
+        if (consent) {
+            document.getElementById('cookie-banner').classList.add('hidden');
+            if (consent === 'accepted') {
+                gtag('consent', 'update', { analytics_storage: 'granted' });
+            }
+        }
     </script>
 
 </body>
