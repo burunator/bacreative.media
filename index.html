@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Creative – Google Ads & Paid Media Agentur</title>
+    <meta name="description"
+        content="BA Creative ist eine auf Google Ads und Paid Media spezialisierte Agentur. Wir helfen Unternehmen dabei, messbar mehr Umsatz und Anfragen zu generieren.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        :root {
+            --bg: #08080a;
+            --s1: #0f0f12;
+            --s2: #161619;
+            --s3: #1c1c1f;
+            --t0: #f0efe9;
+            --t1: #9e9d99;
+            --t2: #525250;
+            --t3: #2a2a28;
+            --ac: #c8f135;
+            --ac2: #acd428;
+            --bd: rgba(255, 255, 255, 0.065);
+            --bd2: rgba(255, 255, 255, 0.13);
+            --r: 10px;
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--t0);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 16.5px;
+            line-height: 1.68;
+            -webkit-font-smoothing: antialiased
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        img {
+            display: block;
+            max-width: 100%
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            inset: 0 0 auto;
+            z-index: 300;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .95rem 5vw;
+            background: rgba(8, 8, 10, .88);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--bd);
+        }
+
+        .logo {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: 1.05rem;
+            letter-spacing: -.02em
+        }
+
+        .logo b {
+            color: var(--ac)
+        }
+
+        .nav-r {
+            display: flex;
+            align-items: center;
+            gap: 2rem
+        }
+
+        .nav-r a {
+            font-size: .84rem;
+            color: var(--t1);
+            transition: color .2s
+        }
+
+        .nav-r a:hover {
+            color: var(--t0)
+        }
+
+        .nh {
+            display: flex
+        }
+
+        @media(max-width:680px) {
+            .nh {
+                display: none !important
+            }
+        }
+
+        .nav-btn {
+            background: var(--ac) !important;
+            color: #08080a !important;
+            font-weight: 600;
+            font-size: .82rem !important;
+            padding: .48rem 1.1rem;
+            border-radius: 6px;
+            transition: background .2s !important;
+            white-space: nowrap;
+        }
+
+        .nav-btn:hover {
+            background: var(--ac2) !important
+        }
+
+        /* ─── HERO ─── */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 9rem 5vw 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hgrid {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(var(--bd) 1px, transparent 1px),
+                linear-gradient(90deg, var(--bd) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse 85% 75% at 50% 0%, #000 15%, transparent 100%);
+            pointer-events: none;
+        }
+
+        .hglow {
+            position: absolute;
+            top: -20%;
+            left: 35%;
+            transform: translateX(-50%);
+            width: 850px;
+            height: 580px;
+            background: radial-gradient(ellipse, rgba(200, 241, 53, .05) 0%, transparent 68%);
+            pointer-events: none;
+        }
+
+        .h-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: .72rem;
+            font-weight: 500;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--ac);
+            margin-bottom: 2rem;
+        }
+
+        .h-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--ac);
+            animation: pulse 2.5s ease infinite;
+            flex-shrink: 0
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1
+            }
+
+            50% {
+                opacity: .3
+            }
+        }
+
+        h1 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(2rem, 4.5vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -.03em;
+            max-width: 980px;
+        }
+
+        h1 em {
+            color: var(--ac);
+            font-style: normal
+        }
+
+        .hero-lower {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: flex-end;
+            border-top: 1px solid var(--bd);
+            margin-top: 3rem;
+            padding-top: 3rem;
+        }
+
+        @media(max-width:720px) {
+            .hero-lower {
+                grid-template-columns: 1fr;
+                gap: 2rem
+            }
+        }
+
+        .hero-sub {
+            font-size: .98rem;
+            color: var(--t1);
+            line-height: 1.82;
+            max-width: 440px
+        }
+
+        .hero-sub strong {
+            color: var(--t0);
+            font-weight: 500
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: .8rem
+        }
+
+        @media(max-width:720px) {
+            .hero-actions {
+                align-items: flex-start
+            }
+        }
+
+        .btn-row {
+            display: flex;
+            gap: .7rem;
+            flex-wrap: wrap;
+            justify-content: flex-end
+        }
+
+        @media(max-width:720px) {
+            .btn-row {
+                justify-content: flex-start
+            }
+        }
+
+        .btn-p {
+            background: var(--ac);
+            color: #08080a;
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: .86rem;
+            padding: .85rem 1.65rem;
+            border-radius: 8px;
+            transition: background .2s, transform .15s;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .btn-p:hover {
+            background: var(--ac2);
+            transform: translateY(-1px)
+        }
+
+        .btn-g {
+            border: 1px solid var(--bd2);
+            color: var(--t1);
+            font-size: .86rem;
+            padding: .85rem 1.65rem;
+            border-radius: 8px;
+            transition: all .2s;
+            display: inline-block;
+            white-space: nowrap;
+        }
+
+        .btn-g:hover {
+            border-color: rgba(255, 255, 255, .22);
+            color: var(--t0);
+            background: rgba(255, 255, 255, .04)
+        }
+
+        .hero-note {
+            font-size: .73rem;
+            color: var(--t2);
+            text-align: right
+        }
+
+        @media(max-width:720px) {
+            .hero-note {
+                text-align: left
+            }
+        }
+
+        /* META STRIP */
+        .meta-strip {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--bd);
+        }
+
+        @media(max-width:500px) {
+            .meta-strip {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .ms {
+            padding: 1.5rem 1.5rem;
+            border-right: 1px solid var(--bd);
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+        }
+
+        .ms:last-child {
+            border-right: none
+        }
+
+        .ms-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--ac);
+            flex-shrink: 0
+        }
+
+        .ms p {
+            font-size: .8rem;
+            color: var(--t1);
+            line-height: 1.4
+        }
+
+        /* TICKER */
+        .ticker {
+            overflow: hidden;
+            background: var(--ac);
+            padding: .55rem 0;
+            display: flex;
+            white-space: nowrap
+        }
+
+        .ticker-in {
+            display: flex;
+            animation: roll 30s linear infinite
+        }
+
+        .ti {
+            font-family: 'Syne', sans-serif;
+            font-size: .68rem;
+            font-weight: 800;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+            color: #08080a;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .ti::after {
+            content: '✦';
+            opacity: .3;
+            font-size: .5rem
+        }
+
+        @keyframes roll {
+            from {
+                transform: translateX(0)
+            }
+
+            to {
+                transform: translateX(-50%)
+            }
+        }
+
+        /* SHARED */
+        section {
+            padding: 6.5rem 5vw
+        }
+
+        .stag {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: .7rem;
+            font-weight: 500;
+            letter-spacing: .16em;
+            text-transform: uppercase;
+            color: var(--ac);
+            margin-bottom: 1.1rem;
+        }
+
+        .stag::before {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background: var(--ac)
+        }
+
+        h2 {
+            font-family: 'Syne', sans-serif;
+            font-size: clamp(1.75rem, 3.8vw, 3rem);
+            font-weight: 800;
+            letter-spacing: -.035em;
+            line-height: 1.08;
+            margin-bottom: .9rem;
+        }
+
+        .slead {
+            font-size: .97rem;
+            color: var(--t1);
+            max-width: 560px;
+            line-height: 1.82;
+            margin-bottom: 3.5rem
+        }
+
+        /* PROBLEM */
+        #problem {
+            background: var(--s1)
+        }
+
+        .prob-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center
+        }
+
+        @media(max-width:780px) {
+            .prob-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem
+            }
+        }
+
+        .prob-l p {
+            font-size: .96rem;
+            color: var(--t1);
+            line-height: 1.82;
+            margin-bottom: 1.25rem
+        }
+
+        .prob-l p:last-child {
+            margin-bottom: 0
+        }
+
+        .prob-r {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem
+        }
+
+        .pbox {
+            background: var(--s2);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            padding: 1.5rem 1.75rem;
+        }
+
+        .pbox-head {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            margin-bottom: .6rem
+        }
+
+        .pbox-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(200, 241, 53, .09);
+            border: 1px solid rgba(200, 241, 53, .15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .pbox-icon svg {
+            width: 15px;
+            height: 15px;
+            stroke: var(--ac);
+            fill: none;
+            stroke-width: 1.9;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .pbox h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: .88rem;
+            font-weight: 800;
+            letter-spacing: -.01em
+        }
+
+        .pbox p {
+            font-size: .83rem;
+            color: var(--t1);
+            line-height: 1.7
+        }
+
+        /* LEISTUNGEN */
+        #leistungen {
+            background: var(--bg)
+        }
+
+        .svc-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--bd);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            overflow: hidden;
+        }
+
+        @media(max-width:860px) {
+            .svc-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:500px) {
+            .svc-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .svc {
+            background: var(--bg);
+            padding: 2.25rem 1.85rem;
+            transition: background .2s
+        }
+
+        .svc:hover {
+            background: var(--s1)
+        }
+
+        .svc-ic {
+            width: 40px;
+            height: 40px;
+            border-radius: 9px;
+            background: rgba(200, 241, 53, .08);
+            border: 1px solid rgba(200, 241, 53, .14);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .svc-ic svg {
+            width: 18px;
+            height: 18px;
+            stroke: var(--ac);
+            fill: none;
+            stroke-width: 1.8;
+            stroke-linecap: round;
+            stroke-linejoin: round
+        }
+
+        .svc h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: .92rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: .6rem
+        }
+
+        .svc p {
+            font-size: .84rem;
+            color: var(--t1);
+            line-height: 1.7
+        }
+
+        /* FÜR WEN */
+        #fuerwen {
+            background: var(--s1)
+        }
+
+        .fw-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--bd);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            overflow: hidden
+        }
+
+        @media(max-width:680px) {
+            .fw-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .fw {
+            background: var(--s1);
+            padding: 2.5rem 2.25rem;
+            transition: background .2s
+        }
+
+        .fw:hover {
+            background: var(--s2)
+        }
+
+        .fw-n {
+            font-family: 'Syne', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: rgba(200, 241, 53, .07);
+            line-height: 1;
+            letter-spacing: -.05em;
+            margin-bottom: 1.25rem;
+        }
+
+        .fw h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: .97rem;
+            font-weight: 800;
+            letter-spacing: -.015em;
+            margin-bottom: .7rem
+        }
+
+        .fw p {
+            font-size: .86rem;
+            color: var(--t1);
+            line-height: 1.75;
+            margin-bottom: 1.25rem
+        }
+
+        .fw ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: .5rem
+        }
+
+        .fw li {
+            font-size: .82rem;
+            color: var(--t1);
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            line-height: 1.55
+        }
+
+        .fw li::before {
+            content: '—';
+            color: var(--ac);
+            flex-shrink: 0;
+            font-size: .73rem;
+            margin-top: 3px
+        }
+
+        /* APPROACH / WARUM */
+        #warum {
+            background: var(--bg)
+        }
+
+        .warum-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: start
+        }
+
+        @media(max-width:820px) {
+            .warum-wrap {
+                grid-template-columns: 1fr;
+                gap: 3.5rem
+            }
+        }
+
+        .w-intro p {
+            font-size: .96rem;
+            color: var(--t1);
+            line-height: 1.82;
+            margin-bottom: 1.25rem
+        }
+
+        .w-points {
+            display: flex;
+            flex-direction: column;
+            gap: 1.75rem;
+            margin-top: 2.5rem
+        }
+
+        .wp {
+            display: flex;
+            gap: 1.1rem;
+            align-items: flex-start
+        }
+
+        .wp-n {
+            font-family: 'Syne', sans-serif;
+            font-size: .68rem;
+            font-weight: 800;
+            color: var(--ac);
+            border: 1px solid rgba(200, 241, 53, .22);
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .wp-body h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: .93rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: .35rem
+        }
+
+        .wp-body p {
+            font-size: .85rem;
+            color: var(--t1);
+            line-height: 1.72
+        }
+
+        .quote-card {
+            background: var(--s2);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            padding: 2.25rem 2.25rem 0;
+            overflow: hidden;
+        }
+
+        .quote-text {
+            font-size: .97rem;
+            line-height: 1.82;
+            color: var(--t0);
+            padding-left: 1.15rem;
+            border-left: 2px solid var(--ac);
+            margin-bottom: 2rem;
+            font-style: italic;
+        }
+
+        .quote-author {
+            display: flex;
+            align-items: center;
+            gap: .85rem;
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--bd);
+            margin-bottom: 0;
+        }
+
+        .qa-av {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(200, 241, 53, .1);
+            border: 1px solid rgba(200, 241, 53, .22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Syne', sans-serif;
+            font-size: .88rem;
+            font-weight: 800;
+            color: var(--ac);
+            flex-shrink: 0;
+        }
+
+        .qa-info h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: .88rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: 1px
+        }
+
+        .qa-info p {
+            font-size: .76rem;
+            color: var(--t2)
+        }
+
+        .kpi-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background: var(--bd);
+            margin: 0 -2.25rem;
+        }
+
+        .kpi {
+            padding: 1.25rem 1.5rem;
+            background: var(--s3);
+            text-align: center
+        }
+
+        .kpi-v {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--ac);
+            letter-spacing: -.03em;
+            line-height: 1;
+            margin-bottom: .25rem
+        }
+
+        .kpi-l {
+            font-size: .7rem;
+            color: var(--t2)
+        }
+
+        .team-card {
+
+
+            overflow: hidden
+        }
+
+        .team-img-wrap {
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+
+        }
+
+        .team-img {
+            width: 50%;
+            height: auto;
+            display: block;
+            transition: transform .4s;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.02)
+        }
+
+        .team-img-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: .75rem 1.25rem;
+            background: linear-gradient(transparent, rgba(8, 8, 10, .8));
+            font-size: .69rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ac)
+        }
+
+        .team-bio {
+            padding: 1.5rem 1.75rem
+        }
+
+        .team-member-row {
+            display: flex;
+            align-items: center;
+            gap: .85rem;
+            margin-bottom: .85rem
+        }
+
+        .tmr-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(200, 241, 53, .1);
+            border: 1px solid rgba(200, 241, 53, .22);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Syne", sans-serif;
+            font-size: .8rem;
+            font-weight: 800;
+            color: var(--ac);
+            flex-shrink: 0
+        }
+
+        .team-member-row h4 {
+            font-family: "Syne", sans-serif;
+            font-size: .93rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: 2px
+        }
+
+        .tmr-role {
+            font-size: .74rem;
+            color: var(--t2);
+            line-height: 1.4
+        }
+
+        .tmr-text {
+            font-size: .84rem;
+            color: var(--t1);
+            line-height: 1.75;
+            margin-bottom: 1rem
+        }
+
+        .tmr-text strong {
+            color: var(--t0);
+            font-weight: 500
+        }
+
+        .tmr-awards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .5rem
+        }
+
+        .award-badge {
+            font-size: .73rem;
+            color: var(--ac);
+            border: 1px solid rgba(200, 241, 53, .2);
+            background: rgba(200, 241, 53, .07);
+            border-radius: 100px;
+            padding: 4px 12px;
+            font-weight: 500
+        }
+
+        .team-divider {
+            height: 1px;
+            background: var(--bd);
+            margin: 0
+        }
+
+        .team-photo-wrap {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--r) var(--r) 0 0;
+            aspect-ratio: 4/3
+        }
+
+        .team-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            display: block;
+            transition: transform .4s ease
+        }
+
+        .quote-card:hover .team-photo {
+            transform: scale(1.03)
+        }
+
+        .team-photo-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 1rem 1.5rem;
+            background: linear-gradient(transparent, rgba(8, 8, 10, .75))
+        }
+
+        .tp-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            font-size: .69rem;
+            font-weight: 600;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: var(--ac)
+        }
+
+        .tp-pill::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--ac);
+            flex-shrink: 0
+        }
+
+        .team-members {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid var(--bd)
+        }
+
+        .tm {
+            flex: 1
+        }
+
+        .tm-div {
+            width: 1px;
+            height: 36px;
+            background: var(--bd);
+            flex-shrink: 0
+        }
+
+        .tm-info h4 {
+            font-family: 'Syne', sans-serif;
+            font-size: .86rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: 2px
+        }
+
+        .tm-info p {
+            font-size: .73rem;
+            color: var(--t2);
+            line-height: 1.4
+        }
+
+        /* PROZESS */
+        #prozess {
+            background: var(--s1)
+        }
+
+        .pz-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--bd);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            overflow: hidden;
+        }
+
+        @media(max-width:820px) {
+            .pz-grid {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media(max-width:420px) {
+            .pz-grid {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .pz {
+            background: var(--s1);
+            padding: 2.25rem 1.85rem
+        }
+
+        .pz-n {
+            font-family: 'Syne', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(200, 241, 53, .06);
+            line-height: 1;
+            letter-spacing: -.05em;
+            margin-bottom: 1.35rem;
+        }
+
+        .pz h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: .9rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            margin-bottom: .5rem
+        }
+
+        .pz p {
+            font-size: .83rem;
+            color: var(--t1);
+            line-height: 1.65
+        }
+
+        /* FAQ */
+        #faq {
+            background: var(--bg)
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            background: var(--bd);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            overflow: hidden;
+            max-width: 820px
+        }
+
+        .faq-item {
+            background: var(--bg);
+            border-bottom: 1px solid var(--bd)
+        }
+
+        .faq-item:last-child {
+            border-bottom: none
+        }
+
+        .faq-q {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            font-family: 'Syne', sans-serif;
+            font-size: .9rem;
+            font-weight: 800;
+            letter-spacing: -.01em;
+            cursor: pointer;
+            transition: background .2s;
+        }
+
+        .faq-q:hover {
+            background: var(--s1)
+        }
+
+        .faq-ico {
+            color: var(--ac);
+            font-size: 1.25rem;
+            flex-shrink: 0;
+            line-height: 1;
+            transition: transform .25s
+        }
+
+        .faq-a {
+            display: none;
+            padding: 0 2rem 1.5rem;
+            font-size: .86rem;
+            color: var(--t1);
+            line-height: 1.78;
+        }
+
+        .faq-item.open .faq-q {
+            background: var(--s1)
+        }
+
+        .faq-item.open .faq-a {
+            display: block
+        }
+
+        .faq-item.open .faq-ico {
+            transform: rotate(45deg)
+        }
+
+        /* CTA */
+        #cta {
+            background: var(--s1)
+        }
+
+        .cta-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--bd);
+            border: 1px solid var(--bd);
+            border-radius: var(--r);
+            overflow: hidden;
+        }
+
+        @media(max-width:620px) {
+            .cta-wrap {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .cta-c {
+            padding: 3.25rem 2.75rem;
+            background: var(--s1)
+        }
+
+        .cta-c.hl {
+            background: var(--ac)
+        }
+
+        .cta-c h3 {
+            font-family: 'Syne', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -.025em;
+            margin-bottom: .85rem
+        }
+
+        .cta-c.hl h3 {
+            color: #08080a
+        }
+
+        .cta-c p {
+            font-size: .9rem;
+            line-height: 1.78;
+            color: var(--t1);
+            margin-bottom: 1.85rem
+        }
+
+        .cta-c.hl p {
+            color: rgba(8, 8, 10, .6)
+        }
+
+        .cta-c ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: .55rem;
+            margin-bottom: 2.25rem
+        }
+
+        .cta-c li {
+            font-size: .83rem;
+            color: var(--t1);
+            display: flex;
+            gap: 9px;
+            line-height: 1.5
+        }
+
+        .cta-c li::before {
+            content: '✓';
+            color: var(--ac);
+            flex-shrink: 0;
+            font-weight: 700
+        }
+
+        .cta-c.hl li::before {
+            color: #08080a
+        }
+
+        .cta-c.hl li {
+            color: rgba(8, 8, 10, .68)
+        }
+
+        .btn-dk {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: #08080a;
+            color: var(--t0);
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: .86rem;
+            padding: .88rem 1.65rem;
+            border-radius: 8px;
+            transition: all .2s;
+        }
+
+        .btn-dk:hover {
+            background: #1c1c1e;
+            transform: translateY(-1px)
+        }
+
+        .btn-ol {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            border: 1px solid var(--bd2);
+            color: var(--t1);
+            font-size: .86rem;
+            padding: .88rem 1.65rem;
+            border-radius: 8px;
+            transition: all .2s;
+        }
+
+        .btn-ol:hover {
+            border-color: var(--t2);
+            color: var(--t0);
+            background: rgba(255, 255, 255, .04)
+        }
+
+        /* KONTAKT */
+        #kontakt {
+            background: var(--bg)
+        }
+
+        .ko-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 6rem;
+            align-items: start
+        }
+
+        @media(max-width:820px) {
+            .ko-wrap {
+                grid-template-columns: 1fr;
+                gap: 3.5rem
+            }
+        }
+
+        .ko-l p {
+            font-size: .94rem;
+            color: var(--t1);
+            line-height: 1.82;
+            margin-bottom: 2.25rem
+        }
+
+        .ko-meta {
+            display: flex;
+            flex-direction: column;
+            gap: .8rem;
+            margin-bottom: 2.25rem
+        }
+
+        .ko-m {
+            display: flex;
+            align-items: center;
+            gap: .85rem;
+            font-size: .86rem;
+            color: var(--t1);
+            transition: color .2s
+        }
+
+        .ko-m:hover {
+            color: var(--t0)
+        }
+
+        .ko-mi {
+            width: 34px;
+            height: 34px;
+            border-radius: 8px;
+            border: 1px solid var(--bd);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0
+        }
+
+        .ko-mi svg {
+            width: 14px;
+            height: 14px;
+            stroke: var(--t2);
+            fill: none;
+            stroke-width: 1.9
+        }
+
+        .tr-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .45rem
+        }
+
+        .tr-b {
+            font-size: .71rem;
+            color: var(--t2);
+            font-weight: 500;
+            border: 1px solid var(--bd);
+            border-radius: 100px;
+            padding: 4px 12px
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: .95rem
+        }
+
+        .fg {
+            display: flex;
+            flex-direction: column;
+            gap: 4px
+        }
+
+        label {
+            font-size: .7rem;
+            font-weight: 600;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            color: var(--t2)
+        }
+
+        input,
+        textarea,
+        select {
+            background: var(--s3);
+            border: 1px solid var(--bd);
+            border-radius: 8px;
+            padding: .78rem .95rem;
+            color: var(--t0);
+            font-family: 'DM Sans', sans-serif;
+            font-size: .9rem;
+            outline: none;
+            transition: border-color .2s;
+            -webkit-appearance: none;
+            width: 100%;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: rgba(200, 241, 53, .3)
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: var(--t3)
+        }
+
+        select option {
+            background: #1c1c1f
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 105px
+        }
+
+        .fr {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: .95rem
+        }
+
+        @media(max-width:420px) {
+            .fr {
+                grid-template-columns: 1fr
+            }
+        }
+
+        .sub-btn {
+            background: var(--ac);
+            color: #08080a;
+            border: none;
+            border-radius: 8px;
+            padding: .95rem;
+            font-family: 'Syne', sans-serif;
+            font-size: .93rem;
+            font-weight: 800;
+            cursor: pointer;
+            transition: all .2s;
+            margin-top: .2rem;
+        }
+
+        .sub-btn:hover {
+            background: var(--ac2);
+            transform: translateY(-1px)
+        }
+
+        .f-note {
+            font-size: .7rem;
+            color: var(--t2);
+            text-align: center;
+            margin-top: .15rem
+        }
+
+        .f-ok {
+            display: none;
+            background: rgba(200, 241, 53, .07);
+            border: 1px solid rgba(200, 241, 53, .18);
+            color: var(--ac);
+            border-radius: 8px;
+            padding: 1.15rem;
+            font-size: .86rem;
+            text-align: center;
+            margin-top: .2rem
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--s1);
+            border-top: 1px solid var(--bd);
+            padding: 2rem 5vw;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: .85rem;
+        }
+
+        .f-logo {
+            font-family: 'Syne', sans-serif;
+            font-weight: 800;
+            font-size: .97rem;
+            letter-spacing: -.02em
+        }
+
+        .f-logo b {
+            color: var(--ac)
+        }
+
+        .f-links {
+            display: flex;
+            gap: 1.5rem
+        }
+
+        .f-links a {
+            font-size: .78rem;
+            color: var(--t2);
+            transition: color .2s
+        }
+
+        .f-links a:hover {
+            color: var(--t1)
+        }
+
+        footer p {
+            font-size: .76rem;
+            color: var(--t2)
+        }
+
+        /* REVEAL */
+        .rv {
+            opacity: 0;
+            transform: translateY(22px);
+            transition: opacity .6s ease, transform .6s ease
+        }
+
+        .rv.in {
+            opacity: 1;
+            transform: none
+        }
+
+        .d1 {
+            transition-delay: .1s
+        }
+
+        .d2 {
+            transition-delay: .2s
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="logo">BA<b>.</b>Creative</a>
+        <div class="nav-r">
+            <a href="#leistungen" class="nh">Leistungen</a>
+            <a href="#warum" class="nh">Über uns</a>
+            <a href="#faq" class="nh">FAQ</a>
+            <a href="#kontakt" class="nav-btn">Kostenloser Check →</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="hgrid"></div>
+        <div class="hglow"></div>
+        <div class="h-eyebrow">
+            <div class="h-dot"></div>Google Ads · Native Ads · Paid Media Agentur
+        </div>
+        <h1>Bezahlte Werbung,<br>die tatsächlich<br><em>Ergebnisse bringt.</em></h1>
+        <div class="hero-lower">
+            <p class="hero-sub">
+                Wir helfen Unternehmen, Online Shops und Marken dabei, durch Google Ads und Native Advertising
+                messbar mehr Umsatz und Anfragen zu generieren.
+                <strong>Fokussiert. Transparent. Ohne Agentur-Overhead.</strong>
+            </p>
+            <div class="hero-actions">
+                <div class="btn-row">
+                    <a href="#cta" class="btn-p">Kostenloser Kampagnen-Check</a>
+                    <a href="#cta" class="btn-g">Strategiegespräch buchen</a>
+                </div>
+                <p class="hero-note">Kostenlos & unverbindlich · Antwort in unter 24 Stunden</p>
+            </div>
+        </div>
+        <div class="meta-strip rv">
+            <div class="ms">
+                <div class="ms-dot"></div>
+                <p>Spezialisiert auf Google Ads & Native Advertising</p>
+            </div>
+            <div class="ms">
+                <div class="ms-dot"></div>
+                <p>Monatlich kündbar — keine Mindestlaufzeit</p>
+            </div>
+            <div class="ms">
+                <div class="ms-dot"></div>
+                <p>Direkter Kontakt — kein Juniors, kein Callcenter</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker">
+        <div class="ticker-in">
+            <div class="ti">Google Search Ads</div>
+            <div class="ti">Native Advertising</div>
+            <div class="ti">E-Commerce Skalierung</div>
+            <div class="ti">Conversion Optimierung</div>
+            <div class="ti">Google Display</div>
+            <div class="ti">Remarketing</div>
+            <div class="ti">Funnel-Aufbau</div>
+            <div class="ti">Kampagnen-Check</div>
+            <div class="ti">Google Search Ads</div>
+            <div class="ti">Native Advertising</div>
+            <div class="ti">E-Commerce Skalierung</div>
+            <div class="ti">Conversion Optimierung</div>
+            <div class="ti">Google Display</div>
+            <div class="ti">Remarketing</div>
+            <div class="ti">Funnel-Aufbau</div>
+            <div class="ti">Kampagnen-Check</div>
+        </div>
+    </div>
+
+    <!-- PROBLEM -->
+    <section id="problem">
+        <div class="prob-grid">
+            <div class="prob-l rv">
+                <div class="stag">Das Problem</div>
+                <h2>Viele Werbebudgets bringen nicht das, was sie könnten.</h2>
+                <p>Die meisten Unternehmen schalten Anzeigen — aber zu wenige überprüfen systematisch, ob das Budget
+                    wirklich effizient eingesetzt wird. Falsche Kampagnenstruktur, schwaches Bidding, keine saubere
+                    Conversion-Messung: Das Geld fließt, die Ergebnisse bleiben aus.</p>
+                <p>Gleichzeitig vergeben viele Agenturen kleinere Accounts intern an weniger erfahrene Mitarbeiter. Das
+                    Resultat: Kunden zahlen für Seniorberatung und bekommen Junior-Umsetzung.</p>
+                <p>Wir machen das anders.</p>
+            </div>
+            <div class="prob-r rv d1">
+                <div class="pbox">
+                    <div class="pbox-head">
+                        <div class="pbox-icon"><svg viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg></div>
+                        <h4>Kampagnen die wirklich konvertieren</h4>
+                    </div>
+                    <p>Wir bauen Kampagnenstrukturen die auf echte Ergebnisse ausgelegt sind — nicht auf beeindruckende
+                        Klickzahlen im monatlichen Report.</p>
+                </div>
+                <div class="pbox">
+                    <div class="pbox-head">
+                        <div class="pbox-icon"><svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg></div>
+                        <h4>Kein Overhead, volle Aufmerksamkeit</h4>
+                    </div>
+                    <p>Bei uns betreut immer ein erfahrener Spezialist euren Account — nicht wer gerade verfügbar ist.
+                        Direkte Kommunikation, klare Verantwortung.</p>
+                </div>
+                <div class="pbox">
+                    <div class="pbox-head">
+                        <div class="pbox-icon"><svg viewBox="0 0 24 24">
+                                <line x1="18" y1="20" x2="18" y2="10" />
+                                <line x1="12" y1="20" x2="12" y2="4" />
+                                <line x1="6" y1="20" x2="6" y2="14" />
+                            </svg></div>
+                        <h4>Transparenz über alles</h4>
+                    </div>
+                    <p>Ihr wisst zu jeder Zeit was mit eurem Budget passiert. Kein Rätselraten, keine geschönten Reports
+                        — klare Zahlen und ehrliche Einschätzungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEISTUNGEN -->
+    <section id="leistungen">
+        <div class="rv">
+            <div class="stag">Leistungen</div>
+            <h2>Was wir für euch tun.</h2>
+            <p class="slead">Wir konzentrieren uns auf bezahlten Traffic — mit vollem Fokus. Kein SEO, kein
+                Social-Media-Management. Paid Media, von Grund auf richtig gemacht.</p>
+        </div>
+        <div class="svc-grid rv">
+            <div class="svc">
+                <div class="svc-ic"><svg viewBox="0 0 24 24">
+                        <circle cx="11" cy="11" r="8" />
+                        <path d="m21 21-4.35-4.35" />
+                    </svg></div>
+                <h3>Google Search Ads</h3>
+                <p>Anzeigen die Menschen erreichen, die aktiv nach eurem Angebot suchen — im richtigen Moment, mit der
+                    richtigen Botschaft. Der direkteste Weg zu kaufbereiten Kunden.</p>
+            </div>
+            <div class="svc">
+                <div class="svc-ic"><svg viewBox="0 0 24 24">
+                        <path d="M12 20h9" />
+                        <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                    </svg></div>
+                <h3>Native Advertising</h3>
+                <p>Taboola, Revcontent, Outbrain. Wir bauen Pre-sell Funnels und VSL-Traffic-Strukturen die wirklich
+                    konvertieren — auf Basis echter Kampagnenerfahrung.</p>
+            </div>
+            <div class="svc">
+                <div class="svc-ic"><svg viewBox="0 0 24 24">
+                        <rect x="2" y="3" width="20" height="14" rx="2" />
+                        <path d="M8 21h8M12 17v4" />
+                    </svg></div>
+                <h3>Google Display & Remarketing</h3>
+                <p>Besucher zurückholen die eure Seite verlassen haben. Günstig im CPM, präzise im Targeting — und oft
+                    der übersehene Hebel für mehr Umsatz.</p>
+            </div>
+            <div class="svc">
+                <div class="svc-ic"><svg viewBox="0 0 24 24">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                        <line x1="16" y1="13" x2="8" y2="13" />
+                        <line x1="16" y1="17" x2="8" y2="17" />
+                    </svg></div>
+                <h3>Kampagnen-Audit</h3>
+                <p>Ihr habt schon Kampagnen laufen und das Gefühl, da ist mehr drin? Wir analysieren strukturiert was
+                    funktioniert, was nicht — und was der nächste sinnvolle Schritt ist.</p>
+            </div>
+            <div class="svc">
+                <div class="svc-ic"><svg viewBox="0 0 24 24">
+                        <path d="M18 20V10" />
+                        <path d="M12 20V4" />
+                        <path d="M6 20v-6" />
+                    </svg></div>
+                <h3>Landingpage & Funnel</h3>
+                <p>Die beste Kampagne bringt nichts ohne eine Seite die konvertiert. Wir optimieren oder bauen
+                    Landingpages die aus Traffic echte Kunden machen.</p>
+            </div>
+            <div class="svc">
+                <div class="svc-ic"><svg viewBox="0 0 24 24">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                        <circle cx="9" cy="7" r="4" />
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                    </svg></div>
+                <h3>Laufende Betreuung</h3>
+                <p>Monatliche Optimierung, klares Reporting, direkte Erreichbarkeit. Ihr sprecht immer mit der Person
+                    die auch wirklich an euren Kampagnen arbeitet.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FÜR WEN -->
+    <section id="fuerwen">
+        <div class="rv">
+            <div class="stag">Für wen</div>
+            <h2>Für Unternehmen die wachsen wollen.</h2>
+            <p class="slead">Wir arbeiten mit Unternehmen jeder Größe — was sie gemeinsam haben: ein funktionierendes
+                Angebot und den Willen, mehr daraus zu machen.</p>
+        </div>
+        <div class="fw-grid rv">
+            <div class="fw">
+                <div class="fw-n">01</div>
+                <h3>Online Shops & E-Commerce</h3>
+                <p>Euer Shop macht Umsatz — aber ihr wisst, da steckt mehr drin. Wir helfen euch dabei, profitabel zu
+                    skalieren ohne Budget zu verschwenden.</p>
+                <ul>
+                    <li>Bestehende Kampagnen auf echten ROAS optimieren</li>
+                    <li>Search, Display und Shopping kombinieren</li>
+                    <li>Neue Kanäle strukturiert erschließen</li>
+                    <li>Mehr aus jedem investierten Euro herausholen</li>
+                </ul>
+            </div>
+            <div class="fw">
+                <div class="fw-n">02</div>
+                <h3>Brands & Produkt-Unternehmen</h3>
+                <p>Euer Produkt funktioniert und Kunden sind zufrieden. Jetzt soll es mehr Menschen sehen und kaufen —
+                    mit der richtigen Kampagnen-Architektur.</p>
+                <ul>
+                    <li>Vollständiger Funnel-Aufbau von Anzeige bis Kauf</li>
+                    <li>Profitables Wachstum statt reinem Umsatz-Fokus</li>
+                    <li>Health, Info-Produkte, Physical Products, SaaS</li>
+                    <li>Skalierung auf Basis messbarer Ergebnisse</li>
+                </ul>
+            </div>
+            <div class="fw">
+                <div class="fw-n">03</div>
+                <h3>Dienstleister & lokale Unternehmen</h3>
+                <p>Ihr macht gute Arbeit — aber zu wenige wissen davon. Wir kümmern uns um die Werbung, ihr konzentriert
+                    euch auf euer Kerngeschäft.</p>
+                <ul>
+                    <li>Mehr qualifizierte Anfragen aus eurer Region</li>
+                    <li>Klares Reporting — ihr seht was das Budget bringt</li>
+                    <li>Kein langer Vertrag, monatlich kündbar</li>
+                    <li>Direkter Ansprechpartner, kein Callcenter</li>
+                </ul>
+            </div>
+            <div class="fw">
+                <div class="fw-n">04</div>
+                <h3>Unternehmen mit laufenden Kampagnen</h3>
+                <p>Ihr schaltet bereits Anzeigen, seid aber nicht überzeugt von den Ergebnissen. Ein frischer Blick von
+                    außen kann den entscheidenden Unterschied machen.</p>
+                <ul>
+                    <li>Unabhängiger Audit eurer bestehenden Kampagnen</li>
+                    <li>Identifikation von Budget-Ineffizienzen</li>
+                    <li>Konkreter Optimierungsplan mit Prioritäten</li>
+                    <li>Kostenlos und unverbindlich als Einstieg</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- WARUM / ÜBER UNS -->
+    <section id="warum">
+        <div class="warum-wrap">
+            <div class="rv">
+                <div class="stag">Warum BA Creative</div>
+                <h2>Wir lassen Ergebnisse für uns sprechen.</h2>
+                <div class="w-intro">
+                    <p>Es gibt viele Agenturen. Was uns unterscheidet ist nicht was wir versprechen — sondern wie wir
+                        arbeiten und was wir bereits gemacht haben.</p>
+                </div>
+                <div class="w-points">
+                    <div class="wp">
+                        <div class="wp-n">01</div>
+                        <div class="wp-body">
+                            <h3>Echte Kampagnenerfahrung — nicht nur Theorie</h3>
+                            <p>Wir haben eigene Kampagnen mit eigenem Risiko skaliert. Das gibt uns einen anderen Blick
+                                auf jede Kampagne: Wir wissen was wirklich funktioniert — und was nur gut klingt.</p>
+                        </div>
+                    </div>
+                    <div class="wp">
+                        <div class="wp-n">02</div>
+                        <div class="wp-body">
+                            <h3>Kein Weitergeben — ihr sprecht mit dem Spezialisten</h3>
+                            <p>Bei uns betreut immer die Person euren Account, die auch wirklich daran arbeitet. Kein
+                                Junior der nach dem Onboarding-Call nie wieder zu hören ist.</p>
+                        </div>
+                    </div>
+                    <div class="wp">
+                        <div class="wp-n">03</div>
+                        <div class="wp-body">
+                            <h3>Wir behandeln euer Budget wie unser eigenes</h3>
+                            <p>Jeder Euro muss einen Grund haben. Wir erklären euch warum wir welche Entscheidungen
+                                treffen — und sagen euch auch wenn etwas nicht sinnvoll ist.</p>
+                        </div>
+                    </div>
+                    <div class="wp">
+                        <div class="wp-n">04</div>
+                        <div class="wp-body">
+                            <h3>Monatlich kündbar — von Anfang an</h3>
+                            <p>Keine 12-Monats-Verträge. Kunden bleiben weil die Ergebnisse stimmen — nicht weil ein
+                                Vertragsparagraph sie dazu zwingt. Das gilt ab dem ersten Monat.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rv d2">
+                <div class="team-card">
+                    <div class="team-img-wrap">
+                        <img src="bursel.jpg" Burak & Selin Altas – BA Creative class="team-img">
+                        <div class="team-img-label">Das Team hinter BA Creative</div>
+                    </div>
+                    <div class="team-bio">
+                        <div class="team-member-row">
+                            <div class="tmr-avatar">BA</div>
+                            <div>
+                                <h4>Burak Altas</h4>
+                                <p class="tmr-role">Gründer & CEO · Google Ads & Native Ads</p>
+                            </div>
+                        </div>
+                        <p class="tmr-text">Seit 2019 im Affiliate Marketing und E-Commerce aktiv — mit Google Ads,
+                            Microsoft Ads und Native Ads. Ausgezeichnet als <strong>Clickbank Platinum Affiliate
+                                (2022–2026)</strong> sowie mit dem <strong>MaxWeb Gold Award</strong> in jedem Jahr von
+                            2022 bis 2026. Solo über 10 Mio. € Umsatz generiert, davon über 8 Mio. € Ad Spend betrieben.
+                        </p>
+                        <div class="tmr-awards">
+                            <div class="award-badge">🏆 Clickbank Platinum 2022–2025</div>
+                            <div class="award-badge">🥇 MaxWeb Gold 2022–2026</div>
+                        </div>
+                    </div>
+                    <div class="team-divider"></div>
+                    <div class="team-bio">
+                        <div class="team-member-row">
+                            <div class="tmr-avatar">SA</div>
+                            <div>
+                                <h4>Selin Altas</h4>
+                                <p class="tmr-role">Social Media & Content Creation</p>
+                            </div>
+                        </div>
+                        <p class="tmr-text">Verantwortlich für Social Media Strategie und Content Creation bei BA
+                            Creative. Professionelle Videoproduktion in Zusammenarbeit mit unserem Videografen-Netzwerk.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROZESS -->
+    <section id="prozess">
+        <div class="rv">
+            <div class="stag">Ablauf</div>
+            <h2>Vom ersten Gespräch zu laufenden Kampagnen.</h2>
+            <p class="slead">Einfach, strukturiert, ohne unnötiges Hin und Her. In der Regel innerhalb von 14 Tagen
+                live.</p>
+        </div>
+        <div class="pz-grid rv">
+            <div class="pz">
+                <div class="pz-n">01</div>
+                <h3>Erstes Gespräch</h3>
+                <p>30 Minuten, kostenlos. Wir hören zu: was ihr macht, wo ihr steht, was ihr wollt. Kein Pitch, keine
+                    Präsentation — ein ehrliches Gespräch ob und wie wir helfen können.</p>
+            </div>
+            <div class="pz">
+                <div class="pz-n">02</div>
+                <h3>Analyse & Strategie</h3>
+                <p>Bestehende Kampagnen, Website, Wettbewerb. Wir zeigen euch konkret was funktioniert, was nicht — und
+                    was der erste sinnvolle Schritt ist. Mit realistischen Erwartungen.</p>
+            </div>
+            <div class="pz">
+                <div class="pz-n">03</div>
+                <h3>Setup & Launch</h3>
+                <p>Kampagnenstruktur, Tracking, Conversions, Anzeigen — sauber aufgebaut und getestet. Innerhalb von 7
+                    bis 14 Tagen nach Freigabe live. Kein ewiges Onboarding.</p>
+            </div>
+            <div class="pz">
+                <div class="pz-n">04</div>
+                <h3>Optimierung & Reporting</h3>
+                <p>Laufende Anpassungen, monatliches Reporting, direkte Erreichbarkeit. Ihr seht jeden Monat was euer
+                    Budget gebracht hat — und was als nächstes passiert.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+        <div class="rv">
+            <div class="stag">Häufige Fragen</div>
+            <h2>Was uns am häufigsten gefragt wird.</h2>
+        </div>
+        <div class="faq-list rv">
+            <div class="faq-item">
+                <div class="faq-q">Wie viel Werbebudget brauchen wir mindestens? <span class="faq-ico">+</span></div>
+                <div class="faq-a">Für Google Search Ads empfehlen wir ab ca. 1.000 € pro Monat um aussagekräftige Daten
+                    zu sammeln und zu optimieren. Je nach Branche und Wettbewerb kann mehr sinnvoll sein — das
+                    besprechen wir im ersten Gespräch ehrlich und ohne Übertreibung.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Wie lange dauert es bis wir erste Ergebnisse sehen? <span class="faq-ico">+</span>
+                </div>
+                <div class="faq-a">Erste Daten kommen oft schon nach wenigen Tagen. Stabile, optimierte Performance
+                    entsteht in der Regel nach 4 bis 8 Wochen. Wir setzen keine unrealistischen Erwartungen — und
+                    kommunizieren offen wenn etwas länger dauert als geplant.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Wer hat Zugriff auf unsere Kampagnen und Accounts? <span class="faq-ico">+</span>
+                </div>
+                <div class="faq-a">Ihr habt zu jeder Zeit vollen Zugriff auf alle eure Accounts. Das Werbebudget fließt
+                    immer direkt an Google oder die jeweilige Plattform — niemals über uns. Vollständige Transparenz ist
+                    für uns keine Option, sondern Standard.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Wir arbeiten bereits mit einer Agentur. Lohnt sich trotzdem ein Check? <span
+                        class="faq-ico">+</span></div>
+                <div class="faq-a">Ja — und zwar unverbindlich. Im kostenlosen Kampagnen-Check schauen wir uns eure
+                    bestehenden Kampagnen an und sagen euch konkret was wir sehen. Wenn alles gut läuft, sagen wir das
+                    auch. Kein Verkaufsdruck.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Gibt es eine Mindestlaufzeit oder lange Vertragsbindung? <span
+                        class="faq-ico">+</span></div>
+                <div class="faq-a">Nein. Wir arbeiten monatlich kündbar. Wir glauben, dass eine langfristige
+                    Zusammenarbeit durch Ergebnisse entsteht — nicht durch Vertragsparagraphen. Ihr seid jederzeit frei.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Für welche Branchen funktioniert das? <span class="faq-ico">+</span></div>
+                <div class="faq-a">Google Ads funktioniert für fast jedes Business mit einer Website und einem klaren
+                    Conversion-Ziel: E-Commerce, Dienstleister, Supplements, Software, lokale Unternehmen. Was nicht
+                    funktioniert: rein informationelle Seiten ohne klares Angebot. Das sagen wir euch ehrlich — auch
+                    wenn es bedeutet, dass wir nicht zusammenarbeiten.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DUAL CTA -->
+    <section id="cta">
+        <div class="rv">
+            <div class="stag">Einstieg</div>
+            <h2>Wie wollen wir starten?</h2>
+            <p class="slead">Beides kostenlos, beides unverbindlich. Wählt was für euch gerade mehr Sinn ergibt.</p>
+        </div>
+        <div class="cta-wrap rv">
+            <div class="cta-c hl">
+                <h3>Kostenloser Kampagnen-Check</h3>
+                <p>Ihr habt bereits Kampagnen laufen — und das Gefühl, da ist mehr drin. Wir analysieren strukturiert
+                    was gut läuft und wo Potenzial liegt.</p>
+                <ul>
+                    <li>Vollständige Analyse eurer Kampagnen</li>
+                    <li>Konkrete Optimierungsvorschläge mit Prioritäten</li>
+                    <li>Ehrliche Einschätzung — ohne Verkaufsdruck</li>
+                    <li>Kostenlos, auch wenn wir danach nicht zusammenarbeiten</li>
+                </ul>
+                <a href="#kontakt" class="btn-dk">Jetzt anfragen →</a>
+            </div>
+            <div class="cta-c">
+                <h3>Kostenloses Strategiegespräch</h3>
+                <p>Ihr wollt neu starten oder wisst noch nicht genau wo ihr anfangen sollt. Wir besprechen 30 Minuten
+                    was für euren Fall realistisch ist.</p>
+                <ul>
+                    <li>30 Minuten mit einem erfahrenen Spezialisten</li>
+                    <li>Ehrliche Einschätzung des Potenzials und der Kosten</li>
+                    <li>Klarer nächster Schritt — auch wenn er "noch nicht" heißt</li>
+                    <li>Keine automatisierten Antworten oder Follow-up-Sequenzen</li>
+                </ul>
+                <a href="#kontakt" class="btn-ol">Gespräch buchen →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAKT -->
+    <section id="kontakt">
+        <div class="ko-wrap">
+            <div class="rv">
+                <div class="stag">Kontakt</div>
+                <h2>Schreibt uns.</h2>
+                <p>Keine automatisierten Antworten, kein Sales-Bot. Wir antworten persönlich — in der Regel innerhalb
+                    weniger Stunden.</p>
+                <div class="ko-meta">
+                    <a href="mailto:mail@ba-creative.me" class="ko-m">
+                        <div class="ko-mi"><svg viewBox="0 0 24 24">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg></div>
+                        mail@ba-creative.me
+                    </a>
+                    <a href="tel:+491605577938" class="ko-m">
+                        <div class="ko-mi"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91A16 16 0 0 0 13 14.83l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15.92z" />
+                            </svg></div>
+                        +49 160 5577938
+                    </a>
+                </div>
+                <div class="tr-row">
+                    <span class="tr-b">Kostenloser Check</span>
+                    <span class="tr-b">Antwort in 24h</span>
+                    <span class="tr-b">Monatlich kündbar</span>
+                    <span class="tr-b">Kein Verkaufsdruck</span>
+                    <span class="tr-b">Direkter Kontakt</span>
+                </div>
+            </div>
+            <form id="cf" class="rv d2">
+                <div class="fr">
+                    <div class="fg"><label>Vorname</label><input type="text" placeholder="Max" required></div>
+                    <div class="fg"><label>Nachname</label><input type="text" placeholder="Mustermann" required></div>
+                </div>
+                <div class="fg"><label>E-Mail</label><input type="email" placeholder="max@euerunternehmen.de" required>
+                </div>
+                <div class="fg"><label>Website / Online Shop</label><input type="text" placeholder="www.euershop.de">
+                </div>
+                <div class="fg">
+                    <label>Monatliches Werbebudget (oder geplant)</label>
+                    <select>
+                        <option value="">Bitte wählen...</option>
+                        <option>Unter 1.000 €/Monat</option>
+                        <option>1.000 – 3.000 €/Monat</option>
+                        <option>3.000 – 10.000 €/Monat</option>
+                        <option>10.000 – 50.000 €/Monat</option>
+                        <option>Über 50.000 €/Monat</option>
+                    </select>
+                </div>
+                <div class="fg">
+                    <label>Wie können wir helfen?</label>
+                    <textarea placeholder="Was macht ihr, wo hakt es gerade, was wollt ihr erreichen?"></textarea>
+                </div>
+                <button type="submit" class="sub-btn">Jetzt kostenlos anfragen →</button>
+                <p class="f-note">Kostenlos & unverbindlich · Persönliche Antwort in unter 24 Stunden</p>
+                <div class="f-ok" id="fok">✓ Nachricht erhalten. Wir melden uns persönlich innerhalb von 24 Stunden.
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="#" class="f-logo">BA<b>.</b>Creative</a>
+        <div class="f-links">
+            <a href="#">Impressum</a>
+            <a href="#">Datenschutz</a>
+            <a href="#kontakt">Kontakt</a>
+        </div>
+        <p>© 2025 BA Creative · Burak Altas</p>
+    </footer>
+
+    <script>
+        const io = new IntersectionObserver(e => {
+            e.forEach(x => { if (x.isIntersecting) x.target.classList.add('in') })
+        }, { threshold: .07 });
+        document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        document.getElementById('cf').addEventListener('submit', function (e) {
+            e.preventDefault();
+            this.querySelectorAll('input,textarea,select').forEach(el => el.value = '');
+            document.getElementById('fok').style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
